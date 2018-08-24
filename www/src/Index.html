@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="./js/lib/math.min.js"></script>
+  <script type="text/javascript" src="./js/lib/plotly-latest.min.js"></script>
+  <title>Math learn</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+</head>
+<body>
+<div class="like" ><p></p><i class="far fa-smile-beam"></i></div>
+<div class="dislike"><p></p><i class="far fa-smile-wink"></i></div>
+<div class="demo-2 spinner "></div>
+<div class="container">
+  <div class="header">
+    <i class="fas fa-bars button-burger-menu"></i>
+    <h1> <i class="fas fa-graduation-cap"></i> math learn</h1>
+  </div>
+  <div class="dimmer"></div>
+  <div class="side-menu hidden" id="side-menu">
+    <span style="flex-grow: 2"></span>
+    <span class="cl"><a href="#1">Урок№1</a></span>
+    <span class="cl"><a href="#2">Урок№2</a></span>
+    <span class="cl"><a href="#3">Урок№3</a></span>
+    <span class="cl"><a href="#4">Урок№4</a></span>
+    <span class="cl"><a href="#5">Урок№5</a></span>
+    <span class="cl"><a href="#6">Урок№6</a></span>
+    <span class="cl"><a href="#7">Урок№7</a></span>
+    <span class="cl"><a href="#8">Урок№8</a></span>
+    <span style="flex-grow: 5"></span>
+  </div>
+  <div class="columns">
+    <div class="column-one">
+      <div class="area"></div>
+    </div>
+    <div class="button-resize"></div>
+    <div class="column-two">
+      <div class="container-left" id="input-form">
+        <div class="line-input activeField" id="line-input">
+                    <span style="background: #f9f9f9;display: inline-block;height: 100%;position: absolute;top:0;left:0;">
+                        <span class ='data-number-input' style="font-size: 10px;">1</span>
+                    </span>
+          <span class="notification-img"></span>
+          <span class="inputField"></span>
+          <span class="btn-delete-input"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="btn-addNewField" id="btn-add-item"><i class="fas fa-plus"></i></div>
+        <input id ="focus" type="hidden">
+      </div>
+      <div id="plot" class="container-right"></div>
+      <div id="calculator">
+        <div class="calc-column">
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="x"><var>x</var></div>
+            <div class="button-keypad" data-key-value="y"><var>y</var></div>
+            <div class="button-keypad" data-key-value="("><span>&#40;</span></div>
+            <div class="button-keypad" data-key-value=")"><span>&#41;</span></div>
+
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="$^2"><var>a</var><sup>2</sup></div>
+            <div class="button-keypad" data-key-value="|"><var>&#124;a&#124;</var></div>
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="$left"><span>&#8592;</span></div>
+            <div class="button-keypad" data-key-value="$right"><span>&#8594;</span></div>
+
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="$backspace"><i class="fas fa-backspace"></i></div>
+            <div class="button-keypad" data-key-value="$enter"><span>&#8629;</span></div>
+          </div>
+        </div>
+        <div style="flex-grow: 0.5;"></div>
+        <div class="calc-column">
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="7"><span>7</span></div>
+            <div class="button-keypad" data-key-value="8"><span>8</span></div>
+            <div class="button-keypad" data-key-value="9"><span>9</span></div>
+            <div class="button-keypad" data-key-value="/"><span>&#247;</span></div>
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="4"><span>4</span></div>
+            <div class="button-keypad" data-key-value="5"><span>5</span></div>
+            <div class="button-keypad" data-key-value="6"><span>6</span></div>
+            <div class="button-keypad" data-key-value="*"><span>&#215;</span></div>
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="1"><span>1</span></div>
+            <div class="button-keypad" data-key-value="2"><span>2</span></div>
+            <div class="button-keypad" data-key-value="3"><span>3</span></div>
+            <div class="button-keypad" data-key-value="-"><span>&#45;</span></div>
+          </div>
+          <div class="calc-row">
+            <div class="button-keypad" data-key-value="0"><span>0</span></div>
+            <div class="button-keypad" data-key-value="."><span>&#46;</span></div>
+            <div class="button-keypad" data-key-value="="><span>&#61;</span></div>
+            <div class="button-keypad" data-key-value="+"><span>&#43;</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div id="btn-calculator" class="button-keypad-toggle open"><i class="far fa-keyboard"></i><i class="toggle fas fa-sort-up"></i></div>
+    </div>
+
+
+  </div>
+  <div class="footer"><p>Copyright © 2018. Все права защищены.</p></div>
+</div>
+
+
+<script type="module" src="js/res.js"></script>
+<script type="module" src="js/input/index.js"></script>
+<script type="module" src="js/bookjs/main.js"></script>
+<script type="module" src="./js/plot/indexPlot.js"></script>
+</body>
+</html>
