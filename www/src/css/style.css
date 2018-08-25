@@ -309,7 +309,7 @@ h2 {
     position: fixed;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1200;
     top:0;
     left:0;
     bottom: 0;
@@ -328,7 +328,7 @@ h2 {
     position: fixed;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1200;
     top:0;
     left:0;
     bottom: 0;
@@ -411,24 +411,25 @@ div.header > i{
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 1024px) {
     .inputField{
         font-size: 19px;
     }
-    .button-keypad-toggle,#calculator{
-        display: none;
+    #calculator{
+        width: 100%;
     }
     body > div.container > div.header > h1{
         margin: 40px;
     }
     .side-menu{
         width:100%;
+        z-index: 1002;
     }
     .column-two{
         flex-direction: column;
     }
     .container-right {
-        height: 500px;
+        height: 600px;
         width: 100%;
     }
     .container-left{
