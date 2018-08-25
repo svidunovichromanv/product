@@ -70,7 +70,11 @@ export class FormulaController {
             if (/\$/.test(data)) {
                 switch (data) {
                     case '$backspace': {
-                        this.formulaViewInput.handlePressKeypad({which: 8});
+                        let id = document.querySelector('.activeField').id;
+                        let deletedNode = this.formulaViewInput.caret.value.previousElementSibling;
+                        let index = deletedNode.getAttribute('data-index');
+                        this.formula.deleteDataFromItem({[id]: index});
+                        this.formulaViewInput.deleteDataFromItem({[id]: index});
                         break;
                     }
                     case '$enter': {
