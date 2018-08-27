@@ -48,25 +48,3 @@ function mouseup(e) {
 
 
 
-
-//кнопка показать меню
-
-const menu = document.getElementById('side-menu');
-
-function showSideMenu(e){
-    let btn = null;
-    if(!e){
-        btn = document.querySelector('.fa-times');
-    }
-    else{
-        btn = e.target;
-    }
-    menu.classList.toggle('hidden');
-    btn.setAttribute('style', 'transform:translateX(20px);z-index:1210;');
-    btn.classList.toggle('fa-bars');
-    btn.classList.toggle('fa-times');
-    if(!menu.classList.contain('hidden')){
-        console.log('hello')
-    }
-}
-

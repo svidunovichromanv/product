@@ -62,7 +62,7 @@ function showSideMenu(e){
         btn = e.target;
     }
     menu.classList.toggle('hidden');
-    btn.setAttribute('style', 'transform:translateX(20px);z-index:1210;');
+    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1200;');
     btn.classList.toggle('fa-bars');
     btn.classList.toggle('fa-times');
     if(!menu.classList.contain('hidden')){

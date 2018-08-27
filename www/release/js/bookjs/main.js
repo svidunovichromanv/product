@@ -265,23 +265,27 @@ function getRandomInt(min, max)
 {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-    
-    const burger = document.querySelector('.button-burger-menu');
 
-   const menu = document.getElementById('side-menu');
 
-    function showSideMenu(e){
-     let btn = null;
-     if(!e){
-         btn = document.querySelector('.fa-times');
-     }
-     else{
-         btn = e.target;
-     }
-        menu.classList.toggle('hidden');
-        btn.setAttribute('style', 'transform:translateX(20px);z-index:201;');
-        btn.classList.toggle('fa-bars');
-        btn.classList.toggle('fa-times');
-  
+//кнопка показать меню
+const burger = document.querySelector('.button-burger-menu');
+const menu = document.getElementById('side-menu');
+
+function showSideMenu(e){
+    let btn = null;
+    if(!e){
+        btn = document.querySelector('.fa-times');
     }
+    else{
+        btn = e.target;
+    }
+    menu.classList.toggle('hidden');
+    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1200;');
+    btn.classList.toggle('fa-bars');
+    btn.classList.toggle('fa-times');
+    if(!menu.classList.contain('hidden')){
+        console.log('hello')
+    }
+}
+
 burger.addEventListener('click', showSideMenu);
