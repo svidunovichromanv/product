@@ -136,8 +136,6 @@ export function checkAnswer(e){
 
     function isTrueAnswer(result, answer) {
         let answerFromData = getAnswerFromData(result);
-        console.log(answerFromData);
-        console.log(answer);
         let check = 0;
         for(let i=0;i<answer.length;i++){
             for(let j=0;j<answerFromData.length;j++){
@@ -145,7 +143,6 @@ export function checkAnswer(e){
                     check ++;
                 }
             }
-            if(!check)return false;
         }
         if(check === answer.length){
             return true;
@@ -279,12 +276,9 @@ function showSideMenu(e){
         btn = e.target;
     }
     menu.classList.toggle('hidden');
-    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1200;');
+    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1304;');
     btn.classList.toggle('fa-bars');
     btn.classList.toggle('fa-times');
-    if(!menu.classList.contain('hidden')){
-        console.log('hello')
-    }
 }
 
 burger.addEventListener('click', showSideMenu);

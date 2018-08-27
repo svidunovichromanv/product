@@ -276,12 +276,9 @@ function showSideMenu(e){
         btn = e.target;
     }
     menu.classList.toggle('hidden');
-    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1200;');
+    btn.setAttribute('style', 'transform:translateX(20px);z-index: 1304;');
     btn.classList.toggle('fa-bars');
     btn.classList.toggle('fa-times');
-    if(!menu.classList.contain('hidden')){
-        console.log('hello')
-    }
 }
 
 burger.addEventListener('click', showSideMenu);
