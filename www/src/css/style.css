@@ -141,7 +141,7 @@ h2 {
 #calculator.calculator-visible{
     bottom: 0;
     opacity: 1;
-
+    z-index: 1300;
 }
 
 .button-keypad-toggle{
@@ -152,6 +152,7 @@ h2 {
     text-align: center;
     padding: 5px;
     opacity: 0;
+    z-index: 1000;
 }
 .button-keypad-toggle.open{
     background: #dddddd;
@@ -405,7 +406,7 @@ div.header > i{
     .container-left {
         align-self: stretch;
     }
-    
+
     .container-left, .container-right {
         height: auto;
     }
@@ -433,6 +434,7 @@ div.header > i{
         width: 100%;
     }
     .container-left{
+        height: 400px;
         width: 100%;
     }
 
@@ -443,16 +445,16 @@ div.header > i{
 }
 
 .dimmer::before {
-  z-index: 9001;
-  cursor: pointer;
-  display: none;
-  position: fixed;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(65, 65, 65, 0.15);
+    z-index: 9001;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(65, 65, 65, 0.15);
 
 }
 

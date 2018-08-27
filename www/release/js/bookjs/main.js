@@ -136,9 +136,6 @@ export function checkAnswer(e){
 
     function isTrueAnswer(result, answer) {
         let answerFromData = getAnswerFromData(result);
-        if(answerFromData.length !== answer.length)return false;
-        console.log(answerFromData);
-        console.log(answer);
         let check = 0;
         for(let i=0;i<answer.length;i++){
             for(let j=0;j<answerFromData.length;j++){
@@ -146,7 +143,6 @@ export function checkAnswer(e){
                     check ++;
                 }
             }
-            if(!check)return false;
         }
         if(check === answer.length){
             return true;
