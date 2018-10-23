@@ -282,3 +282,15 @@ function showSideMenu(e){
 }
 
 burger.addEventListener('click', showSideMenu);
+
+ //info about app
+let aboutBtn = document.querySelector('.about-btn');
+aboutBtn.addEventListener('click', showInfo);
+
+function showInfo() {
+    let infoBlock = document.querySelector('.about-app-info');
+    infoBlock.style.display = 'flex';
+    setTimeout(()=>{
+        infoBlock.style.display = 'none';
+    }, 5000);
+};

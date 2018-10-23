@@ -36,30 +36,66 @@ html, body, .container{
     background-color: #3cd977;
     color:white;
     width: 100%;
-    height: 5%;
-    min-height: 34px;
     position: relative;
     display: flex;
     align-items:center;
+    height: 5%;
+}
+.header{
+    min-height:30px;
+    font-size: 10px;
+}
+.about-btn{
+    font-size: 15px;
+    padding: 0 10px;
+    display: inline-block;
+    flex-grow: 2;
+    text-align: right;
+}
+.about-btn i{
+    color:#ff9d21;
+}
+.about-app-info{
+    position: fixed;
+    background: white;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    color:#ff9d21;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.about-app-info p{
+    display: inline-block;
+    text-align: center;
+    border: solid 2px #ff9d21;
+    border-radius: 10px;
+    padding: 20px;
+
+
 }
 .footer{
-    display: flex;
     justify-content: space-around;
+    min-height:50px;
 }
 .footer .footer-link a{
     color: white;
     text-decoration: none;
 }
 .footer p{
-    width: calc(100% / 3);
+    width: 20%;
     text-align: center;
+}
+.footer .footer-link{
+    width: 60%;
 }
 .footer .footer-link a:hover{
     color: #ff9d21;
     text-decoration: none;
 }
-
-
 .columns {
     display: flex;
     align-content: stretch;
@@ -498,4 +534,3 @@ div.header > i{
     left: 0;
     background: rgba(65, 65, 65, 0.15);
 }
-
